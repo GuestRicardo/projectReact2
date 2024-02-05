@@ -5,8 +5,9 @@ import { useState } from 'react';
 function App() {
 
   //useState
-  const [name, setName] = useState("");
-
+  const [reverse, setReverse] = useState(false);
+  const reverseClass = reverse ? 'reverse' : '';
+  const handleClick  = () => setReverse(!reverse)
   return (
     <div className="App">
       <header className="App-header">
@@ -16,7 +17,7 @@ function App() {
         </p>
 
         <p>
-        <button type="button" onClick={}>Reverse</button>
+        <button type="button" onClick={ handleClick }>Reverse</button>
         </p>
       </header>
     </div>
