@@ -14,20 +14,20 @@ function App() {
   //----------------------------------------
 //para contar os clicks no button
   const [counters, setCounters]=useState(0);
-  const handeIncrement = () =>{
-    setCounters(counters+1);
+  const handleIncrement = () =>{
+    setCounters(counters + 1);
   };
   //------------------------------------------------
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className={`App-logo ${reverseClass}`} alt="logo" />
-        <h1>Contador: { counters }</h1>
+        <img src={logo} className={`App-logo ${ reverseClass }`} alt="logo" />
+        <h1> Contador: { counters }</h1>
         <p>
-        <button type="button" onClick={ handleClick }>Reverse {reverseClass} </button>
+        <button type="button" onClick={ handleClick }>Reverse { reverseClass } </button>
         </p>
         <p>
-        <button type="button" onClick={ counters }>Incrementando {handeIncrement} </button>
+        <button type="button" onClick={ handleIncrement }>Incrementando { counters } </button>
         </p>
       </header>
     </div>
