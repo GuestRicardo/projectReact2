@@ -17,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <button type="button" onClick={  }>Reverse</button>
       </header>
     </div>
   );
