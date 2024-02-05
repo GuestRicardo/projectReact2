@@ -10,11 +10,14 @@ function App() {
   const reverseClass = reverse ? 'reverse' : '';
   const handleClick  = () => {
     setReverse(!reverse);
-    setCounters(!reverse);
   }
   //----------------------------------------
 //para contar os clicks no button
-  const [counters, setCounters]=useState(0)
+  const [counters, setCounters]=useState(0);
+  const handeIncrement = () =>{
+    setCounters(counters+1);
+  };
+  //------------------------------------------------
   return (
     <div className="App">
       <header className="App-header">
