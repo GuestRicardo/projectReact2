@@ -17,7 +17,7 @@ function App() {
         </p>
 
         <p>
-        <button type="button" onClick={ handleClick }>Reverse</button>
+        <button type="button" onClick={ handleClick }>Reverse {reverseClass} </button>
         </p>
       </header>
     </div>
