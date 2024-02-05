@@ -26,6 +26,9 @@ function App() {
         <p>
         <button type="button" onClick={ handleClick }>Reverse {reverseClass} </button>
         </p>
+        <p>
+        <button type="button" onClick={ counters }>Incrementando {handeIncrement} </button>
+        </p>
       </header>
     </div>
   );
