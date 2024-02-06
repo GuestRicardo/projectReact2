@@ -15,7 +15,10 @@ function App() {
 //para contar os clicks no button
   const [counters, setCounters]=useState(0);
   const handleIncrement = () =>{
-    setCounters(counters + 1);
+    //com callback
+    setCounters((c) => c+ 1);
+    //sem callback
+    //setCounters(counters + 1);
   };
   //------------------------------------------------
   return (
