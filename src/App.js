@@ -9,7 +9,10 @@ function App() {
   const [reverse, setReverse] = useState(false);
   const reverseClass = reverse ? 'reverse' : '';
   const handleClick  = () => {
-    setReverse(!reverse);
+    //sem callback
+    //setReverse(!reverse);
+    //com callback
+    setReverse((reverse)=> !reverse);
   }
   //----------------------------------------
 //para contar os clicks no button
