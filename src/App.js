@@ -3,41 +3,46 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-
-  //useState
-  //para inversao do giro da logo
-  const [reverse, setReverse] = useState(false);
-  const reverseClass = reverse ? 'reverse' : '';
-  const handleClick  = () => {
-    //sem callback
-    //setReverse(!reverse);
-    //com callback
-    setReverse((reverse)=> !reverse);
-  }
-  //----------------------------------------
-//para contar os clicks no button
-  const [counters, setCounters]=useState(0);
-  const handleIncrement = () =>{
-    //com callback
-    setCounters((c) => c+ 1);
-    //sem callback
-    //setCounters(counters + 1);
-  };
-  //------------------------------------------------
+//setState
+//   //useState
+//   //para inversao do giro da logo
+//   const [reverse, setReverse] = useState(false);
+//   const reverseClass = reverse ? 'reverse' : '';
+//   const handleClick  = () => {
+//     //sem callback
+//     //setReverse(!reverse);
+//     //com callback
+//     setReverse((reverse)=> !reverse);
+//   }
+//   //----------------------------------------
+// //para contar os clicks no button
+//   const [counters, setCounters]=useState(0);
+//   const handleIncrement = () =>{
+//     //com callback
+//     setCounters((c) => c+ 1);
+//     //sem callback
+//     //setCounters(counters + 1);
+//   };
+  //----------------------fim do state--------------------------
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className={`App-logo ${ reverseClass }`} alt="logo" />
-        <h1> Contador: { counters }</h1>
-        <p>
-        <button type="button" onClick={ handleClick }>Reverse { reverseClass } </button>
-        </p>
-        <p>
-        <button type="button" onClick={ handleIncrement }>Incrementando { counters } </button>
-        </p>
-      </header>
+    //setState
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className={`App-logo ${ reverseClass }`} alt="logo" />
+    //     <h1> Contador: { counters }</h1>
+    //     <p>
+    //     <button type="button" onClick={ handleClick }>Reverse { reverseClass } </button>
+    //     </p>
+    //     <p>
+    //     <button type="button" onClick={ handleIncrement }>Incrementando { counters } </button>
+    //     </p>
+    //   </header>
+    // </div>
+    //---------------fim do setstate-------------------------
+    <div className='App'>
+        <h1>Teste</h1>
     </div>
-  );
+    );
 }
 
 export default App;
