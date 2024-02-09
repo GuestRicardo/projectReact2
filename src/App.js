@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
@@ -24,6 +24,9 @@ function App() {
 //     //setCounters(counters + 1);
 //   };
   //----------------------fim do state--------------------------
+//useEffect
+  const[counter, setCounter] = useState(0);
+//--------------------------fim do useEfect-----------------
   return (
     //setState
     // <div className="App">
@@ -40,7 +43,7 @@ function App() {
     // </div>
     //---------------fim do setstate-------------------------
     <div className='App'>
-        <h1>Teste</h1>
+        <h1>contador: {counter}</h1>
     </div>
     );
 }
