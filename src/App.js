@@ -44,6 +44,7 @@ function App() {
     //---------------fim do setstate-------------------------
     <div className='App'>
         <h1>contador: {counter}</h1>
+        <button onClick={()=> setCounter(counter + 1)}>aperte aqui!</button>
     </div>
     );
 }
