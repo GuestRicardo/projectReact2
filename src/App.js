@@ -47,7 +47,6 @@ function App() {
         <button onClick={()=> setCounter(counter + 1)}>aperte aqui!</button>
     </div>
     );
-    
 }
 
 export default App;
