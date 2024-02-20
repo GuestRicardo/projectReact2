@@ -60,8 +60,9 @@ const incrementCounter = (num)=>{
     <div className='App'>
         <h1>contador: {counter}</h1>
       {/* Para os exemplos anteriores, nao se aplica ao usecallback o debaixo q e com usecallback */}
-      {/*   <button onClick={()=> setCounter(counter + 1)}>aperte aqui!</button>*/ }
-        <button onClick={incrementCounter}>aperte aqui!</button>
+      {/* <button onClick={()=> setCounter(counter + 1)}>aperte aqui!</button>*/ }
+
+        <Button incrementButton={incrementCounter}/>
     </div>
     );
 }
