@@ -1,9 +1,10 @@
 //import logo from './logo.svg';
+import P from 'prop-types'
 import './App.css';
 import { useState, useEffect } from 'react';
 
-const Button = ()=>{
-  return <button onClick={}>aperte aqui!</button>
+const Button = ({ incrementCounter }) =>{
+  return <button onClick={incrementCounter}>aperte aqui!</button>
 }
 
 function App() {
@@ -34,6 +35,11 @@ function App() {
 const incrementCounter = ()=>{
   setCounter(counter + 1)
 };
+
+Button.propTypes ={
+  incrementCounter: P.func,
+};
+
   return (
     //setState
      // <div className="App">
@@ -55,7 +61,7 @@ const incrementCounter = ()=>{
         <h1>contador: {counter}</h1>
       {/* Para os exemplos anteriores, nao se aplica ao usecallback o debaixo q e com usecallback */}
       {/*   <button onClick={()=> setCounter(counter + 1)}>aperte aqui!</button>*/ }
-        <button onClick={()=> setCounter(counter + 1)}>aperte aqui!</button>
+        <button onClick={incrementCounter}>aperte aqui!</button>
     </div>
     );
 }
