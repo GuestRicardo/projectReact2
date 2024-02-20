@@ -6,6 +6,9 @@ import { useState, useEffect } from 'react';
 const Button = ({ incrementButton }) =>{
   return <button onClick={incrementButton(10)}>aperte aqui!</button>
 }
+Button.propTypes ={
+  incrementButton: P.func,
+};
 
 function App() {
 //setState
@@ -33,12 +36,9 @@ function App() {
   const[counter, setCounter] = useState(0);
 //--------------------------fim do useEfect-----------------
 const incrementCounter = (num)=>{
-  setCounter(num + 1)
+  setCounter(counter + num)
 };
 
-Button.propTypes ={
-  incrementButton: P.func,
-};
 
   return (
     //setState
