@@ -3,8 +3,8 @@ import P from 'prop-types'
 import './App.css';
 import { useState, useEffect } from 'react';
 
-const Button = ({ incrementCounter }) =>{
-  return <button onClick={incrementCounter}>aperte aqui!</button>
+const Button = ({ incrementButton }) =>{
+  return <button onClick={incrementButton(10)}>aperte aqui!</button>
 }
 
 function App() {
@@ -32,12 +32,12 @@ function App() {
 //useEffect
   const[counter, setCounter] = useState(0);
 //--------------------------fim do useEfect-----------------
-const incrementCounter = ()=>{
-  setCounter(counter + 1)
+const incrementCounter = (num)=>{
+  setCounter(num + 1)
 };
 
 Button.propTypes ={
-  incrementCounter: P.func,
+  incrementButton: P.func,
 };
 
   return (
