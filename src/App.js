@@ -38,7 +38,7 @@ function App() {
 //--------------------------fim do useEfect-----------------
 const incrementCounter = useCallback((num)=>{
   setCounter(counter + num)
-});
+}, [counter]);
 
 console.log('pAI RENDERIZOU');
   return (
