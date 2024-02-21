@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import P from 'prop-types'
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const Button = React.memo(function Button({ incrementButton }){
   console.log('filho renderizado')
@@ -36,13 +36,13 @@ function App() {
 //useEffect
   const[counter, setCounter] = useState(0);
 //--------------------------fim do useEfect-----------------
-const incrementCounter = (num)=>{
+const incrementCounter = useCallback((num)=>{
   setCounter(counter + num)
-};
+});
 
 console.log('pAI RENDERIZOU');
   return (
-//setState
+/* //setState
      // <div className="App">
      //   <header className="App-header">
      //     <img src={logo} className={`App-logo ${ reverseClass }`} alt="logo" />
@@ -55,7 +55,7 @@ console.log('pAI RENDERIZOU');
      //     </p>
      //   </header>
      // </div>
-//---------------fim do setstate-------------------------
+//---------------fim do setstate------------------------- */
 
 
     <div className='App'>
