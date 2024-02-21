@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import P from 'prop-types'
 import './App.css';
-import { useState, useEffect, React } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Button = React.memo(function Button({ incrementButton }){
   console.log('filho renderizado')
