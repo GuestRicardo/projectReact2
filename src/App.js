@@ -40,7 +40,7 @@ const incrementCounter = (num)=>{
   setCounter(counter + num)
 };
 
-
+console.log('pAI RENDERIZOU');
   return (
     //setState
      // <div className="App">
