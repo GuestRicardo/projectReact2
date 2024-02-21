@@ -42,7 +42,7 @@ const incrementCounter = (num)=>{
 
 console.log('pAI RENDERIZOU');
   return (
-    //setState
+//setState
      // <div className="App">
      //   <header className="App-header">
      //     <img src={logo} className={`App-logo ${ reverseClass }`} alt="logo" />
@@ -55,7 +55,7 @@ console.log('pAI RENDERIZOU');
      //     </p>
      //   </header>
      // </div>
-    //---------------fim do setstate-------------------------
+//---------------fim do setstate-------------------------
 
 
     <div className='App'>
