@@ -1,11 +1,11 @@
 //import logo from './logo.svg';
 import P from 'prop-types'
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, React } from 'react';
 
-const Button = ({ incrementButton }) =>{
-  return <button onClick={incrementButton(10)}>aperte aqui!</button>
-}
+const Button = React.memo(({ incrementButton }) =>{
+  return <button onClick={()=>incrementButton(10)}>aperte aqui!</button>
+});
 Button.propTypes ={
   incrementButton: P.func,
 };
