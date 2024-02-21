@@ -3,7 +3,8 @@ import P from 'prop-types'
 import './App.css';
 import { useState, useEffect, React } from 'react';
 
-const Button = React.memo(({ incrementButton }) =>{
+const Button = React.memo(function Button({ incrementButton }){
+  console.log('filho renderizado')
   return <button onClick={()=>incrementButton(10)}>aperte aqui!</button>
 });
 Button.propTypes ={
