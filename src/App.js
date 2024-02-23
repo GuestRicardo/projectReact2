@@ -9,7 +9,7 @@ function App() {
   console.log('Componente pai renderizado!');
   //component did mount
   useEffect(() => {
-
+    fetch('https://jsonplaceholder.typicode.com/posts');
   },[ ]);
   return (
     <div className='App'>
