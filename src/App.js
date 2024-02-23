@@ -4,11 +4,13 @@ import './App.css';
 
 
 function App() {
-return (
-  <div className='App'>
+  console.log('Componente pai renderizado!');
+
+  return (
+    <div className='App'>
       <h1>teste</h1>
-  </div>
-);
+    </div>
+  );
 }
 
 export default App;
