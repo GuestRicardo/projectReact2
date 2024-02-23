@@ -13,17 +13,17 @@ function App() {
   //component did mount
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((r) => r.json());
-    .then((r) => setPosts(r));
+      .then((r) => r.json())
+      .then((r) => setPosts(r));
   }, []);
-
   return (
-    <div className='App'>
-      <h1>teste</h1>
+    <div className="App">
+      {posts.map((post) => {
+
+      })}
     </div>
   );
-}
-
+};
 export default App;
 
 
