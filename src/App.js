@@ -19,11 +19,16 @@ function App() {
   return (
     <div className="App">
       {posts.map((post) => {
-
+        return (
+          <div key={post.id} className='post' >
+            <h1>{post.title}</h1>
+            <p>By: {post.userId}</p>
+          </div>
+        )
       })}
     </div>
-  );
-};
+  )
+}
 export default App;
 
 
