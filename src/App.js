@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import P from 'prop-types'
 import './App.css';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 
 const Button = ({ incrementButton })=>{
   console.log('filho renderizado')
@@ -41,31 +41,20 @@ const incrementCounter = useCallback((num)=>{
 }, [ ]);
 
 console.log('pAI RENDERIZOU');
-  return (
-/* //setState
-     // <div className="App">
-     //   <header className="App-header">
-     //     <img src={logo} className={`App-logo ${ reverseClass }`} alt="logo" />
-     //     <h1> Contador: { counters }</h1>
-     //     <p>
-     //     <button type="button" onClick={ handleClick }>Reverse { reverseClass } </button>
-     //     </p>
-     //     <p>
-     //     <button type="button" onClick={ handleIncrement }>Incrementando { counters } </button>
-     //     </p>
-     //   </header>
-     // </div>
-//---------------fim do setstate------------------------- */
 
+const btn = useMemo(() =>{
+ return <Button incrementButton={incrementCounter}/>
+}, [ incrementCounter ]);
+
+  return (
 
     <div className='App'>
         <h1>contador: {counter}</h1>
-      {/* Para os exemplos anteriores, nao se aplica ao usecallback o debaixo q e com usecallback */}
-      {/* <button onClick={()=> setCounter(counter + 1)}>aperte aqui!</button>*/ }
-
-        <Button incrementButton={incrementCounter}/>
+        {btn}
     </div>
     );
 }
 
 export default App;
+
+
