@@ -31,4 +31,4 @@ function App() {
 }
 export default App;
 
-
+//a chave do return sempre será renderizada primeiro, pra depois ser buscado o useEfect
