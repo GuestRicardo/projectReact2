@@ -21,16 +21,18 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {posts.map((post) => {
-        return (
-          <div key={post.id} className='post' >
-            <h1>{post.title}</h1>
-            <p>By: {post.userId}</p>
-          </div>
-        )
-      })}
+      {posts.length > 0 &&
+        posts.map((post) => {
+          return (
+            <div key={post.id} className='post' >
+              <h1>{post.title}</h1>
+              <p>By: {post.userId}</p>
+            </div>
+          );
+        })}
+      {posts.length <= 0 && <p>Ainda não existe posts esta sendo carregado</p>}
     </div>
-  )
+  );
 }
 export default App;
 
