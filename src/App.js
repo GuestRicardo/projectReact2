@@ -12,9 +12,12 @@ function App() {
 
   //component did mount
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((r) => r.json())
-      .then((r) => setPosts(r));
+    setTimeout(
+      () => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+          .then((r) => r.json())
+          .then((r) => setPosts(r));
+      }, [5000]);
   }, []);
   return (
     <div className="App">
@@ -32,3 +35,4 @@ function App() {
 export default App;
 
 //a chave do return sempre será renderizada primeiro, pra depois ser buscado o useEfect
+//o setTimeout serve para a espera do carregamento dos posts
