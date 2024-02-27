@@ -14,6 +14,15 @@ const Post = ({ post }) => {
     </div>
   );
 }
+const Input = ({ input }) => {
+  <div>
+    <input
+      type="search"
+      value={ value }
+      onChange={(e) => setValue(e.target.value)}
+    />
+  </div>
+}
 
 //tipando o post acima(componente)
 Post.propTypes = {
@@ -21,6 +30,12 @@ Post.propTypes = {
     id: P.number,
     title: P.string,
     body: P.string,
+  }),
+}
+Input.propTypes = {
+  input: P.shape({
+    type: P.string,
+    value: P.string,
   }),
 }
 
@@ -39,6 +54,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <Input />
       {posts.length > 0 && posts.map((post) => <Post key={post.id} post={post} />)}
       {posts.length <= 0 && <p>Ainda não existe posts esta sendo carregado</p>}
     </div>
