@@ -16,11 +16,7 @@ const Post = ({ post }) => {
 }
 const Input = ({ input }) => {
   <div>
-    <input
-      type="search"
-      value={ value }
-      onChange={(e) => setValue(e.target.value)}
-    />
+    <input type="search" value={ value } onChange={(e) => setValue(e.target.value)}/>
   </div>
 }
 
@@ -41,6 +37,8 @@ Input.propTypes = {
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [value, setValue] = useState('');
+
   console.log('Componente pai renderizado!');
 
   //component did mount
