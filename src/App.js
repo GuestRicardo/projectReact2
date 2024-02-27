@@ -57,9 +57,14 @@ function App() {
         <input type="search" value={value} onChange={(e) => setValue(e.target.value)} />
       </div>
       {useMemo(() => {
-        posts.length > 0 && posts.map((post) => <Post key={post.id} post={post} />)
-      }), [posts]}
-      { }
+        return (
+          posts.length > 0 &&
+          posts.map((post) => {
+            return <Post key={post.id} post={post} />;
+          })
+        )
+      }, [posts])}
+
       {posts.length <= 0 && <p>Ainda não existe posts esta sendo carregado</p>}
     </div>
   );
