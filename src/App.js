@@ -5,6 +5,18 @@ import { useMemo } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
+//componentes
+const Post = ({ post }) => {
+  return (
+    <div key={post.id} className='post' >
+      <h1>{post.title}</h1>
+      <p>By: {post.userId}</p>
+    </div>
+  );
+}
+
+//tipando o post acima(o q esta sendo passado pela funçõa({post}))
+post.propTypes
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -24,10 +36,7 @@ function App() {
       {posts.length > 0 &&
         posts.map((post) => {
           return (
-            <div key={post.id} className='post' >
-              <h1>{post.title}</h1>
-              <p>By: {post.userId}</p>
-            </div>
+
           );
         })}
       {posts.length <= 0 && <p>Ainda não existe posts esta sendo carregado</p>}
@@ -38,3 +47,4 @@ export default App;
 
 //a chave do return sempre será renderizada primeiro, pra depois ser buscado o useEfect
 //o setTimeout serve para a espera do carregamento dos posts
+//na tipagem sempre q for objeto será (shape) importantismo isso
