@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 //componentes
 const Post = ({ post }) => {
+  console.log('filho renderizou');
   return (
     <div key={post.id} className='post' >
       <h1>{post.title}</h1>
