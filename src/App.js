@@ -15,8 +15,14 @@ const Post = ({ post }) => {
   );
 }
 
-//tipando o post acima(o q esta sendo passado pela funçõa({post}))
-post.propTypes
+//tipando o post acima(componente)
+Post.propTypes ={
+  post:P.shape({
+    id:P.number,
+    title:P.string,
+    body:P.string,
+  }),
+}
 
 function App() {
   const [posts, setPosts] = useState([]);
