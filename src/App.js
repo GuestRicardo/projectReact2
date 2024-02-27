@@ -39,8 +39,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {posts.length > 0 &&
-        posts.map((post) => (<Post post={post} />))}
+      {posts.length > 0 && posts.map((post) => <Post key={post.id} post={post} />)}
       {posts.length <= 0 && <p>Ainda não existe posts esta sendo carregado</p>}
     </div>
   );
