@@ -49,3 +49,4 @@ export default App;
 //a chave do return sempre será renderizada primeiro, pra depois ser buscado o useEfect
 //o setTimeout serve para a espera do carregamento dos posts
 //na tipagem sempre q for objeto será (shape) importantismo isso
+//observação qualquer momento q o estado muda sera renderizadoo estado inteiro
