@@ -16,11 +16,11 @@ const Post = ({ post }) => {
 }
 
 //tipando o post acima(componente)
-Post.propTypes ={
-  post:P.shape({
-    id:P.number,
-    title:P.string,
-    body:P.string,
+Post.propTypes = {
+  post: P.shape({
+    id: P.number,
+    title: P.string,
+    body: P.string,
   }),
 }
 
@@ -42,7 +42,7 @@ function App() {
       {posts.length > 0 &&
         posts.map((post) => {
           return (
-
+            <Post />
           );
         })}
       {posts.length <= 0 && <p>Ainda não existe posts esta sendo carregado</p>}
