@@ -15,11 +15,7 @@ const Post = ({ post }) => {
     </div>
   );
 }
-// const Input = ({ input }) => {
-//   <div>
-//     <input type="search" value={value} onChange={(e) => setValue(e.target.value)} />
-//   </div>
-// }
+
 
 //tipando o post acima(componente)
 Post.propTypes = {
@@ -29,12 +25,7 @@ Post.propTypes = {
     body: P.string,
   }),
 }
-// Input.propTypes = {
-//   input: P.shape({
-//     type: P.string,
-//     value: P.string,
-//   }),
-// }
+
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -80,4 +71,4 @@ export default App;
 //entao para ter certeza q nao precise q seja carregado tudo de uma vez toda vez q digitar qualquer coisa
 //nao é preciso otimizar o codigo somente quando tiver problema
 //pq quando e renderizado o componbente ele sera criado uma copia e fara uma comparação de estado
-//para q tenha melhor desempenho sera feito o uso do use memo no componente inteiro
+//para q tenha melhor desempenho sera feito o uso do use memo no componente inteiro.
