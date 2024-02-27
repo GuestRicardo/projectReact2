@@ -14,11 +14,11 @@ const Post = ({ post }) => {
     </div>
   );
 }
-const Input = ({ input }) => {
-  <div>
-    <input type="search" value={ value } onChange={(e) => setValue(e.target.value)}/>
-  </div>
-}
+// const Input = ({ input }) => {
+//   <div>
+//     <input type="search" value={value} onChange={(e) => setValue(e.target.value)} />
+//   </div>
+// }
 
 //tipando o post acima(componente)
 Post.propTypes = {
@@ -28,12 +28,12 @@ Post.propTypes = {
     body: P.string,
   }),
 }
-Input.propTypes = {
-  input: P.shape({
-    type: P.string,
-    value: P.string,
-  }),
-}
+// Input.propTypes = {
+//   input: P.shape({
+//     type: P.string,
+//     value: P.string,
+//   }),
+// }
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -52,7 +52,9 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Input />
+      <div>
+        <input type="search" value={value} onChange={(e) => setValue(e.target.value)} />
+      </div>
       {posts.length > 0 && posts.map((post) => <Post key={post.id} post={post} />)}
       {posts.length <= 0 && <p>Ainda não existe posts esta sendo carregado</p>}
     </div>
