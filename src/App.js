@@ -72,3 +72,4 @@ export default App;
 //nao é preciso otimizar o codigo somente quando tiver problema
 //pq quando e renderizado o componbente ele sera criado uma copia e fara uma comparação de estado
 //para q tenha melhor desempenho sera feito o uso do use memo no componente inteiro.
+//ele tem duas staxe, useMemo ou React.memo
