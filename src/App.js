@@ -59,4 +59,5 @@ function App() {
 }
 export default App;
 
-
+//exemplo q sera usado aq, será pego a referencia, é que quando clicar no titulo do texto
+//ele sera automaticamente carredo no input
