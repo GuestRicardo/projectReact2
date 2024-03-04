@@ -45,6 +45,7 @@ function App() {
   }, []);
 
   useEffect(()=>{
+    input.current.focus();
     console.log(input.current);
   }, [value]);
 
@@ -74,3 +75,5 @@ export default App;
 
 //exemplo q sera usado aq, será pego a referencia, é que quando clicar no titulo do texto
 //ele sera automaticamente carredo no input
+// o react esta atrelando o input com o ref q foi usado
+//toda vez q o input mudar ele estará em foco
