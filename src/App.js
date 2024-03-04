@@ -12,7 +12,7 @@ const Post = ({ post, handleClick }) => {
   console.log('filho renderizou');
   return (
     <div key={post.id} className='post' >
-      <h1 style={{color: 'blue'}} onClick={()=> handleClick(post.title)}>{post.title}</h1>
+      <h1 style={{ color: 'blue' }} onClick={() => handleClick(post.title)}>{post.title}</h1>
       <p>By: {post.userId}</p>
     </div>
   );
@@ -34,6 +34,7 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [value, setValue] = useState('');
   const input = useRef(null);
+  const contador = useRef(0);
 
   console.log('Componente pai renderizado!');
 
@@ -44,25 +45,32 @@ function App() {
       .then((r) => setPosts(r));
   }, []);
 
-  useEffect(()=>{
+  //contador
+  useEffect(() => {
+    contador.current++;
+  }, []);
+
+  //input
+  useEffect(() => {
     input.current.focus();
     console.log(input.current);
   }, [value]);
 
-  const handleClick =(value)=>{
+  const handleClick = (value) => {
     setValue(value);
   };
 
   return (
     <div className="App">
       <div>
+        <h3>Renderizou: {contador.current} vezes.</h3>
         <input ref={input} type="search" value={value} onChange={(e) => setValue(e.target.value)} />
       </div>
       {useMemo(() => {
         return (
           posts.length > 0 &&
           posts.map((post) => {
-            return <Post key={post.id} post={post} handleClick={handleClick}/>;
+            return <Post key={post.id} post={post} handleClick={handleClick} />;
           })
         )
       }, [posts])}
