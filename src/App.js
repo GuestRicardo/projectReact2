@@ -40,6 +40,11 @@ function App() {
       .then((r) => r.json())
       .then((r) => setPosts(r));
   }, []);
+
+  const handleClick =()=>{
+
+  }
+
   return (
     <div className="App">
       <div>
