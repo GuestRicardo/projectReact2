@@ -85,3 +85,5 @@ export default App;
 //ele sera automaticamente carredo no input
 // o react esta atrelando o input com o ref q foi usado
 //toda vez q o input mudar ele estará em foco
+//tambem esta sendo contado a quatidade de vezes q esta sendo renderizado
+//no caso esta sendo renderizado o elemento PAI
