@@ -10,7 +10,7 @@ const Post = ({ post, handleClick }) => {
   console.log('filho renderizou');
   return (
     <div key={post.id} className='post' >
-      <h1 onClick={handleClick}>{post.title}</h1>
+      <h1 onClick={()=> handleClick()}>{post.title}</h1>
       <p>By: {post.userId}</p>
     </div>
   );
