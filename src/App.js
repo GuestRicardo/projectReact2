@@ -45,16 +45,16 @@ function App() {
       .then((r) => setPosts(r));
   }, []);
 
-  //contador
-  useEffect(() => {
-    contador.current++;
-  }, []);
-
   //input
   useEffect(() => {
     input.current.focus();
     console.log(input.current);
   }, [value]);
+
+    //contador
+    useEffect(() => {
+      contador.current++;
+    });
 
   const handleClick = (value) => {
     setValue(value);
