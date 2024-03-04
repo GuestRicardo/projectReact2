@@ -6,11 +6,11 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 //componentes
-const Post = ({ post }) => {
+const Post = ({ post, handleClick }) => {
   console.log('filho renderizou');
   return (
     <div key={post.id} className='post' >
-      <h1>{post.title}</h1>
+      <h1 onClick={handleClick}>{post.title}</h1>
       <p>By: {post.userId}</p>
     </div>
   );
@@ -24,6 +24,7 @@ Post.propTypes = {
     title: P.string,
     body: P.string,
   }),
+  handleClick: P.func,
 }
 
 
@@ -48,7 +49,7 @@ function App() {
         return (
           posts.length > 0 &&
           posts.map((post) => {
-            return <Post key={post.id} post={post} />;
+            return <Post key={post.id} post={post} handleClick={handleClick}/>;
           })
         )
       }, [posts])}
