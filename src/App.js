@@ -4,6 +4,8 @@ import './App.css';
 import { useMemo } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useRef } from 'react';
+
 
 //componentes
 const Post = ({ post, handleClick }) => {
@@ -31,6 +33,7 @@ Post.propTypes = {
 function App() {
   const [posts, setPosts] = useState([]);
   const [value, setValue] = useState('');
+  const input = useRef(null);
 
   console.log('Componente pai renderizado!');
 
@@ -41,14 +44,18 @@ function App() {
       .then((r) => setPosts(r));
   }, []);
 
-  const handleClick =()=>{
+  useEffect(()=>{
+    console.log(input.current);
+  }, [value]);
 
-  }
+  const handleClick =(value)=>{
+    setValue(value);
+  };
 
   return (
     <div className="App">
       <div>
-        <input type="search" value={value} onChange={(e) => setValue(e.target.value)} />
+        <input ref={input} type="search" value={value} onChange={(e) => setValue(e.target.value)} />
       </div>
       {useMemo(() => {
         return (
