@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 
 //estado= para passar para os componentes será preciso usar props
-const globalState ={
+const globalState = {
   title: 'O titulo que contexto',
   counter: 0,
 };
@@ -12,20 +12,23 @@ const globalState ={
 const GlobalContext = React.createContext();
 
 //componente
-const Div = ({ children })=>{
+const Div = ({ children }) => {
   return <div className='App'>{children}</div>
 }
-const H1 = ({ children })=>{
+const H1 = ({ children }) => {
   return <h1>{children}</h1>
 }
 //fim dos componentes
 
 function App() {
   return (
-    //usando o componente
-    <Div>
-      <H1>teste</H1>
-    </Div>
+    //usando o estado
+    //dentro do estado esta os componentes
+    <GlobalContext>
+      <Div>
+        <H1>teste</H1>
+      </Div>
+    </GlobalContext>
   );
 }
 export default App;
