@@ -3,9 +3,11 @@ import React from 'react';
 import './App.css';
 import { useContext } from 'react';
 
-//estado= para passar para os componentes será preciso usar props
+//estado inicial(objeto)=
+//para passar para os componentes será preciso usar props
 const globalState = {
   title: 'O titulo que contexto',
+  body: 'O body do contexto',
   counter: 0,
 };
 
@@ -14,11 +16,21 @@ const GlobalContext = React.createContext();
 
 //componente
 const Div = ({ children }) => {
-  return <H1 />
+  return (
+    //com elementos irmãos
+    <>
+      <H1 />
+      <Body />
+    </>
+  );
 }
 const H1 = () => {
   const theContext = useContext(GlobalContext);
   return <h1>{theContext.title}</h1>
+}
+const Body = () => {
+  const theContext = useContext(GlobalContext);
+  return <p>{theContext.body}</p>
 }
 //fim dos componentes
 
@@ -28,9 +40,7 @@ function App() {
     //dentro do estado esta os componentes
     //apartir do momento q recebe o valor o contexto será este no momento
     <GlobalContext.Provider value={globalState}>
-      <Div>
-        <H1>teste</H1>
-      </Div>
+      <Div />
     </GlobalContext.Provider>
   );
 }
