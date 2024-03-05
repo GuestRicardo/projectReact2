@@ -24,7 +24,8 @@ function App() {
   return (
     //usando o estado
     //dentro do estado esta os componentes
-    <GlobalContext.Provider>
+    //apartir do momento q recebe o valor o contexto será este no momento
+    <GlobalContext.Provider value={globalState}>
       <Div>
         <H1>teste</H1>
       </Div>
@@ -41,4 +42,5 @@ export default App;
 //pq nao e ideal passar varias p´rops ate chegar o componente idela q deseja realizar a ação
 //para isso é criado o estado global,
 //para passar o contexto sera via estado, e com a propriedade Provider, o q os componentes veem para controlar sera o value(valor)
-// q será passado pelo contexto, entao resulmo, o contexto recebe o componente
+// q será passado pelo contexto, entao resulmo, o contexto recebe o estado para q o componente possa o ver
+
