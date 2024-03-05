@@ -45,5 +45,5 @@ export default App;
 //para isso é criado o estado global,
 //para passar o contexto sera via estado, e com a propriedade Provider, o q os componentes veem para controlar sera o value(valor)
 // q será passado pelo contexto, entao resulmo, o contexto recebe o estado para q o componente possa o ver
-//com useContext esta sendo pegado elementos do filho sem preisar de props de forma direta
+//com useContext esta sendo pegado elementos do filho sem preisar de props de forma direta, mo caso o titulo q esta no estado
 //isso significa q podemos pegar dados direto de qualquer contexto
