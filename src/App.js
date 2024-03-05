@@ -63,14 +63,3 @@ function App() {
 }
 export default App;
 
-
-//primeiramente para usar o useContext será preciso ter o estado inicial
-//é um objeto
-//agora o proximo passo é criar um componente de contexto(esse e preciso importar o react)
-//esse contexto tera 2 componentes o proveder e o consumer, o consumer aceita tambem o estado inicial
-//são 3 componentes
-// na função APP é onde vai ser disponibilizado o contexto para todos os filhos
-// o use state esta ai para alterar o estado inicial do counter
-//dento do componente global esta todos os filhos
-// o contexto disponibliza o contexto para qualquer chave, valores, estados ou funções para dentro dos componentes
-//tendo acesso ao state, assim todos os componentes teram essa atualização
