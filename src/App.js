@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import React from 'react';
 import './App.css';
+import { useContext } from 'react';
 
 //estado= para passar para os componentes será preciso usar props
 const globalState = {
@@ -13,10 +14,11 @@ const GlobalContext = React.createContext();
 
 //componente
 const Div = ({ children }) => {
-  return <div className='App'>{children}</div>
+  return <H1 />
 }
-const H1 = ({ children }) => {
-  return <h1>{children}</h1>
+const H1 = () => {
+  const theContext = useContext(GlobalContext);
+  return <h1>{theContext.title}</h1>
 }
 //fim dos componentes
 
@@ -43,4 +45,5 @@ export default App;
 //para isso é criado o estado global,
 //para passar o contexto sera via estado, e com a propriedade Provider, o q os componentes veem para controlar sera o value(valor)
 // q será passado pelo contexto, entao resulmo, o contexto recebe o estado para q o componente possa o ver
-
+//com useContext esta sendo pegado elementos do filho sem preisar de props de forma direta
+//isso significa q podemos pegar dados direto de qualquer contexto
