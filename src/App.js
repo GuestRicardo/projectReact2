@@ -30,14 +30,20 @@ const H1 = () => {
   const {
     contextState: { title, counter },
   } = theContext;
-  return <h1>{title} { counter } </h1>
+  return <h1>{title} {counter} </h1>
 }
 const Body = () => {
   const theContext = useContext(GlobalContext);
   const {
-    contextState: { body },
+    contextState: { body, counter }, setContextstate
   } = theContext;
-  return <p>{body}</p>
+  return (
+    <p
+      onClick={()=>setContextstate((spred)=>({ ...spred, counter:spred.counter ++}))}
+    >
+      {body}
+    </p>
+  );
 }
 //fim dos componentes
 
@@ -50,7 +56,7 @@ function App() {
     //usando o estado
     //dentro do estado esta os componentes
     //apartir do momento q recebe o valor o contexto será este no momento
-    <GlobalContext.Provider value={{contextState, setContextstate}}>
+    <GlobalContext.Provider value={{ contextState, setContextstate }}>
       <Div />
     </GlobalContext.Provider>
   );
