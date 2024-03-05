@@ -27,7 +27,10 @@ const Div = ({ children }) => {
 }
 const H1 = () => {
   const theContext = useContext(GlobalContext);
-  return <h1>{theContext.title}</h1>
+  const {
+    contextState: { title, counter },
+  } = theContext;
+  return <h1>{title} { counter } </h1>
 }
 const Body = () => {
   const theContext = useContext(GlobalContext);
