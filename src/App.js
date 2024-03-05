@@ -24,11 +24,11 @@ function App() {
   return (
     //usando o estado
     //dentro do estado esta os componentes
-    <GlobalContext>
+    <GlobalContext.Provider>
       <Div>
         <H1>teste</H1>
       </Div>
-    </GlobalContext>
+    </GlobalContext.Provider>
   );
 }
 export default App;
@@ -40,4 +40,4 @@ export default App;
 //nesses casos nao é inviavel nesta situação, para isso q precisa do useCotext
 //pq nao e ideal passar varias p´rops ate chegar o componente idela q deseja realizar a ação
 //para isso é criado o estado global,
-
+//para passar o contexto sera via estado, e com a propriedade Provider
