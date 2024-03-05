@@ -1,10 +1,31 @@
 //import logo from './logo.svg';
-import P from 'prop-types'
+import React from 'react';
 import './App.css';
+
+//estado
+const globalState ={
+  title: 'O titulo que contexto',
+  counter: 0,
+};
+
+//contexto
+const GlobalContext = React.createContext();
+
+//componente
+const Div = ({ children })=>{
+  return <div className='App'>{children}</div>
+}
+const H1 = ({ children })=>{
+  return <div className='App'>{children}</div>
+}
+//fim dos componentes
 
 function App() {
   return (
-    <h1>teste</h1>
+    //usando o componente
+    <Div>
+      <h1>teste</h1>
+    </Div>
   );
 }
 export default App;
