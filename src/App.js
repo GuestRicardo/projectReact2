@@ -40,4 +40,5 @@ export default App;
 //nesses casos nao é inviavel nesta situação, para isso q precisa do useCotext
 //pq nao e ideal passar varias p´rops ate chegar o componente idela q deseja realizar a ação
 //para isso é criado o estado global,
-//para passar o contexto sera via estado, e com a propriedade Provider
+//para passar o contexto sera via estado, e com a propriedade Provider, o q os componentes veem para controlar sera o value(valor)
+// q será passado pelo contexto, entao resulmo, o contexto recebe o componente
