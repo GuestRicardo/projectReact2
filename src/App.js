@@ -34,7 +34,10 @@ const H1 = () => {
 }
 const Body = () => {
   const theContext = useContext(GlobalContext);
-  return <p>{theContext.body}</p>
+  const {
+    contextState: { body },
+  } = theContext;
+  return <p>{body}</p>
 }
 //fim dos componentes
 
