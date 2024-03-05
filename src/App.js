@@ -16,7 +16,7 @@ const Div = ({ children })=>{
   return <div className='App'>{children}</div>
 }
 const H1 = ({ children })=>{
-  return <div className='App'>{children}</div>
+  return <h1>{children}</h1>
 }
 //fim dos componentes
 
@@ -24,7 +24,7 @@ function App() {
   return (
     //usando o componente
     <Div>
-      <h1>teste</h1>
+      <H1>teste</H1>
     </Div>
   );
 }
