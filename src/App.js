@@ -2,7 +2,7 @@
 import React from 'react';
 import './App.css';
 
-//estado
+//estado= para passar para os componentes será preciso usar props
 const globalState ={
   title: 'O titulo que contexto',
   counter: 0,
