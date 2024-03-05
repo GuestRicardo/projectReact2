@@ -64,13 +64,13 @@ function App() {
 export default App;
 
 
-//para entender primeiro sobre esse hook sera preciso entender o q é contexto
-//é quando tem um componente, q dentro deste tem varios outros, para especificar outras atividades
-//então seria varias propriedades descendo de niveis
-//nesses casos nao é inviavel nesta situação, para isso q precisa do useCotext
-//pq nao e ideal passar varias p´rops ate chegar o componente idela q deseja realizar a ação
-//para isso é criado o estado global,
-//para passar o contexto sera o estado inicial, e com a propriedade Provider, o q os componentes veem para controlar sera o value(valor)
-// q será passado pelo contexto, entao resulmo, o contexto recebe o estado para q o componente possa o ver
-//com useContext esta sendo pegado elementos do filho sem preisar de props de forma direta, mo caso o titulo q esta no estado
-//isso significa q podemos pegar dados direto de qualquer contexto
+//primeiramente para usar o useContext será preciso ter o estado inicial
+//é um objeto
+//agora o proximo passo é criar um componente de contexto(esse e preciso importar o react)
+//esse contexto tera 2 componentes o proveder e o consumer, o consumer aceita tambem o estado inicial
+//são 3 componentes
+// na função APP é onde vai ser disponibilizado o contexto para todos os filhos
+// o use state esta ai para alterar o estado inicial do counter
+//dento do componente global esta todos os filhos
+// o contexto disponibliza o contexto para qualquer chave, valores, estados ou funções para dentro dos componentes
+//tendo acesso ao state, assim todos os componentes teram essa atualização
