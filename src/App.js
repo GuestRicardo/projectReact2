@@ -8,6 +8,11 @@ const globalState = {
   counter: 0
 };
 
+//função para manipular seu estado como reducer
+const reducer =() =>{
+
+};
+
 function App() {
   const[] = useReducer();
   return (
