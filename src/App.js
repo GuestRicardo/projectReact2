@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import { useContext } from 'react';
 import { useState } from 'react';
-import { GlobalContext } from './context/App';
+import { GlobalContext } from './context/AppContext';
 
 //estado inicial(objeto)=
 //para passar para os componentes será preciso usar props
