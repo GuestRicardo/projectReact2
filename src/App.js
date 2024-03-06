@@ -15,40 +15,7 @@ const globalState = {
 //contexto
 const GlobalContext = React.createContext();
 
-//componente
-const Div = ({ children }) => {
-  return (
-    //com elementos irmãos
-    <>
-      <H1 />
-      <Body />
-    </>
-  );
-}
-const H1 = () => {
-  const theContext = useContext(GlobalContext);
-  const {
-    contextState: { title, counter },
-  } = theContext;
-  return <h1>{title} {counter} </h1>
-}
-const Body = () => {
-  const theContext = useContext(GlobalContext);
-  const {
-    contextState: { body, counter }, setContextstate
-  } = theContext;
-  return (
-    <p
-      onClick={()=>setContextstate((spred)=>({ ...spred, counter:spred.counter ++}))}
-    >
-      {body}
-    </p>
-  );
-}
-//fim dos componentes
-
 function App() {
-
   //mudando o estado
   const [contextState, setContextstate] = useState(globalState);
 
