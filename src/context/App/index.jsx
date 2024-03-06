@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { globalState } from "./data";
 
-const GlobalContext = createContext();
+export const GlobalContext = createContext();
 
 //lembrando q esse componente sera usado para manipular o estado
 //todo componente react que tem corpo é chamado por padrão de children
