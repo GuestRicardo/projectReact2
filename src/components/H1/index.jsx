@@ -1,3 +1,5 @@
+import { useContext } from  'react';
+
 export const H1 = () => {
   const theContext = useContext(GlobalContext);
   const {

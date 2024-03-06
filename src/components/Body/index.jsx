@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 export const Body = () => {
   const theContext = useContext(GlobalContext);
   const {
