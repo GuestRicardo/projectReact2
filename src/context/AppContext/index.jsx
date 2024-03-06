@@ -7,9 +7,9 @@ export const GlobalContext = createContext();
 //todo componente react que tem corpo é chamado por padrão de children
 // eslint-disable-next-line
 export const AppContext = (props) => {
-  const [ContextState, setState] = useState(globalState);
+  const [contextState, setState] = useState(globalState);
 
-  return <GlobalContext.Provider value={ { ContextState, setState } }>
+  return <GlobalContext.Provider value={ { contextState, setState } }>
     {/* eslint-disable-next-line */}
     {props.children}
   </GlobalContext.Provider>
