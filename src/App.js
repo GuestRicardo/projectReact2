@@ -1,20 +1,22 @@
-//import logo from './logo.svg';
-import React from 'react';
+import { useReducer } from 'react';
 import './App.css';
-import { AppContext} from './context/AppContext';
-import { Div } from './components/Div';
+
+//estado Complexo
+const globalState = {
+  title: 'Estado Complexo',
+  body: 'o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos',
+  counter: 0
+};
 
 function App() {
-  //mudando o estado
-
+  const[] = useReducer();
   return (
-<AppContext>
-  {/**Tudo que eu passar aq sera filho do AppContext */}
-  <Div>
-
-  </Div>
-</AppContext>
+    <div>
+      <h1>teste</h1>
+    </div>
   );
 }
 export default App;
 
+//o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos
+//reducer é uma função que vai manipular seu estado
