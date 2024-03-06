@@ -9,12 +9,12 @@ const globalState = {
 };
 
 //função para manipular seu estado como reducer
-const reducer =() =>{
-
+const reducer =(state, action) =>{
+  return {...state};
 };
 
 function App() {
-  const[] = useReducer();
+  const[] = useReducer(reducer, );
   return (
     <div>
       <h1>teste</h1>
@@ -24,4 +24,6 @@ function App() {
 export default App;
 
 //o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos
-//reducer é uma função que vai manipular seu estado
+//reducer é uma função que vai manipular seu estado, lembrando sempre que usar uma função reducer sera preciso retornar um estado
+//a função reducer recebe 2 propriedades o estado atual e o action
+//a função recebe o estado atual e retorna o novo estado
