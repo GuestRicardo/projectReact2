@@ -6,14 +6,10 @@ import { useState } from 'react';
 
 //estado inicial(objeto)=
 //para passar para os componentes será preciso usar props
-const globalState = {
-  title: 'O titulo que contexto',
-  body: 'O body do contexto',
-  counter: 0,
-};
+
 
 //contexto
-const GlobalContext = React.createContext();
+
 
 function App() {
   //mudando o estado
