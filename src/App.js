@@ -1,28 +1,19 @@
 //import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import { useContext } from 'react';
-import { useState } from 'react';
-import { GlobalContext } from './context/AppContext';
-
-//estado inicial(objeto)=
-//para passar para os componentes será preciso usar props
-
-
-//contexto
-
+import { AppContext} from './context/AppContext';
+import { Div } from './components/Div';
 
 function App() {
   //mudando o estado
-  const [contextState, setContextstate] = useState(globalState);
 
   return (
-    //usando o estado
-    //dentro do estado esta os componentes
-    //apartir do momento q recebe o valor o contexto será este no momento
-    <GlobalContext.Provider value={{ contextState, setContextstate }}>
-      <Div />
-    </GlobalContext.Provider>
+<AppContext>
+  {/**Tudo que eu passar aq sera filho do AppContext */}
+  <Div>
+
+  </Div>
+</AppContext>
   );
 }
 export default App;
