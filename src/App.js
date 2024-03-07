@@ -13,10 +13,16 @@ const globalState = {
 const reducer = (state, action) => {
   //eslint-disable-next-line
   switch (action.type) {
-    case 'muda':
+    case 'muda': {
       console.log('quando clicar no button ira mudar o estado atraves do dispatch, q esta usando a action para carregar essa mensagem');
       //a spread vai garantior oq estava anteriormente seja exibido, esta sendo pegou tudo q esta no estado anterior
       return { ...state, title: 'mudou!' };
+    }
+    case 'iverter': {
+      console.log('chamou inverter, com isso o titulo sera escrito de tras pra frente');
+      const { title } = state;
+      return { ...state, title: title.split('').reverse().join('') }
+    }
   }
 
   return { ...state };
@@ -24,13 +30,14 @@ const reducer = (state, action) => {
 
 function App() {
   const [state, dispatch] = useReducer(reducer, globalState);
-  //os 3 estao vido do state
+  //os 3 estao vindo do state
   const { title, counter, body } = state;
   return (
     <div>
       <h1>{title} {counter}</h1>
       {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
-      <button onClick={() => dispatch({ type: 'muda' })}>Click</button>
+      <button onClick={() => dispatch({ type: 'muda' })}>Mudar</button>
+      <button onClick={() => dispatch({ type: 'reverse' })}>Inverter</button>
     </div>
   );
 }
