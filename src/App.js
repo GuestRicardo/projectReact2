@@ -27,3 +27,4 @@ export default App;
 //reducer é uma função que vai manipular seu estado, lembrando sempre que usar uma função reducer sera preciso retornar um estado
 //a função reducer recebe 2 propriedades o estado atual e o action
 //a função recebe o estado atual e retorna o novo estado
+//observação o context geralmente e mais organizado com reduce
