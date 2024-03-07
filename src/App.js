@@ -47,3 +47,5 @@ export default App;
 //   return {...state};
 // };
 
+//quando clica no botão(action), ele vai chamar a função reducer que vai da acesso ao estado anterior e a ação q foi disparada, com isso
+//foi criada uma condicional, para comparar o type, se caso estiver diferente será voltado para o estado anterior
