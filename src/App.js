@@ -18,7 +18,7 @@ const reducer = (state, action) => {
       //a spread vai garantior oq estava anteriormente seja exibido, esta sendo pegou tudo q esta no estado anterior
       return { ...state, title: 'mudou!' };
     }
-    case 'iverter': {
+    case 'inverter': {
       console.log('chamou inverter, com isso o titulo sera escrito de tras pra frente');
       const { title } = state;
       return { ...state, title: title.split('').reverse().join('') }
@@ -37,7 +37,7 @@ function App() {
       <h1>{title} {counter}</h1>
       {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
       <button onClick={() => dispatch({ type: 'muda' })}>Mudar</button>
-      <button onClick={() => dispatch({ type: 'reverse' })}>Inverter</button>
+      <button onClick={() => dispatch({ type: 'inverter' })}>Inverter</button>
     </div>
   );
 }
