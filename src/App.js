@@ -15,6 +15,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'muda':
       console.log('quando clicar no button ira mudar o estado atraves do dispatch, q esta usando a action para carregar essa mensagem');
+      //a spread vai garantior oq estava anteriormente seja exibido, esta sendo pegou tudo q esta no estado anterior
       return { ...state, title: 'mudou!' };
   }
 
