@@ -16,7 +16,7 @@ const reducer = (state, action) => {
     case 'muda': {
       console.log('quando clicar no button ira mudar o estado atraves do dispatch, q esta usando a action para carregar essa mensagem');
       //a spread vai garantior oq estava anteriormente seja exibido, esta sendo pegou tudo q esta no estado anterior
-      return { ...state, title: 'mudou!' };
+      return { ...state, title: 'mudou o titulo!' };
     }
     case 'inverter': {
       console.log('chamou inverter, com isso o titulo sera escrito de tras pra frente');
@@ -43,7 +43,7 @@ function App() {
 }
 export default App;
 
-//o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos
+//o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos que requerem alguma logica, em nosso exemplo usamos a condicional switch
 //reducer é uma função que vai manipular seu estado, lembrando sempre que usar uma função reducer sera preciso retornar um estado
 //a função reducer recebe 2 propriedades o estado atual e o action
 //a função recebe o estado atual e retorna o novo estado
