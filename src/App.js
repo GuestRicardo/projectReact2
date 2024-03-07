@@ -14,7 +14,7 @@ const reducer = (state, action) => {
   //eslint-disable-next-line
   switch (action.type) {
     case 'muda': {
-      console.log('quando clicar no button ira mudar o estado atraves do dispatch, q esta usando a action para carregar essa mensagem', action.payload);
+      console.log('quando clicar no button ira mudar o estado atraves do dispatch, q esta usando a action para carregar essa mensagem com payload que seria a data atual', action.payload);
       //a spread vai garantior oq estava anteriormente seja exibido, esta sendo pegou tudo q esta no estado anterior
       return { ...state, title: action.payload };
     }
@@ -36,7 +36,7 @@ function App() {
     <div>
       <h1>{title} {counter}</h1>
       {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
-      <button onClick={() => dispatch({ type: 'muda', payload: new Date().toLocaleDateString('pt-BR') })}>Mudar</button>
+      <button onClick={() => dispatch({ type: 'muda', payload: new Date().toLocaleString('pt-BR') })}>Mudar</button>
       <button onClick={() => dispatch({ type: 'inverter' })}>Inverter</button>
     </div>
   );
