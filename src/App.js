@@ -19,7 +19,9 @@ function App() {
   const {title, counter, body} = state;
   return (
     <div>
-      <h1>{state.title}</h1>
+      <h1>{title} {counter}</h1>
+      {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
+    <button onClick={()=> dispatch({ type: 'action'})}>Click</button>
     </div>
   );
 }
