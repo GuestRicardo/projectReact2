@@ -9,19 +9,25 @@ const globalState = {
 };
 
 //função para manipular seu estado como reducer
-const reducer =(state, action) =>{
-  return {...state};
+const reducer = (state, action) => {
+  switch (action.trype) {
+    case 'muda':
+      console.log('mudou o estado');
+      return { ...state, title: 'mudou!' };
+  }
+
+  return { ...state };
 };
 
 function App() {
-  const[state, dispatch] = useReducer(reducer, globalState);
+  const [state, dispatch] = useReducer(reducer, globalState);
   //os 3 estao vido do state
-  const {title, counter, body} = state;
+  const { title, counter, body } = state;
   return (
     <div>
       <h1>{title} {counter}</h1>
       {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
-    <button onClick={()=> dispatch({ type: 'action'})}>Click</button>
+      <button onClick={() => dispatch({ type: 'action' })}>Click</button>
     </div>
   );
 }
@@ -32,7 +38,7 @@ export default App;
 //a função reducer recebe 2 propriedades o estado atual e o action
 //a função recebe o estado atual e retorna o novo estado
 //observação o context geralmente e mais organizado com reduce
-//o dispatch serve para dispachar coisas(disparar ações)
+//o dispatch serve para dispachar coisas(disparar ações) comum usar objetos e definir o tipo da ação
 
 //função para manipular seu estado como reducer
 // const reducer =(state, action) =>{
