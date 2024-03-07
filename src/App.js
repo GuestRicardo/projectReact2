@@ -24,7 +24,7 @@ const reducer = (state, action) => {
       return { ...state, title: title.split('').reverse().join('') }
     }
   }
-
+  console.log('nenhuma açaõ encontrada')
   return { ...state };
 };
 
