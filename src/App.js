@@ -15,9 +15,11 @@ const reducer =(state, action) =>{
 
 function App() {
   const[state, dispatch] = useReducer(reducer, globalState);
+  //os 3 estao vido do state
+  const {title, counter, body} = state;
   return (
     <div>
-      <h1>teste</h1>
+      <h1>{state.title}</h1>
     </div>
   );
 }
@@ -28,7 +30,7 @@ export default App;
 //a função reducer recebe 2 propriedades o estado atual e o action
 //a função recebe o estado atual e retorna o novo estado
 //observação o context geralmente e mais organizado com reduce
-//o dispatch serve para dispachar coisas
+//o dispatch serve para dispachar coisas(disparar ações)
 
 //função para manipular seu estado como reducer
 // const reducer =(state, action) =>{
