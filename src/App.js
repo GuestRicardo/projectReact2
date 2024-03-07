@@ -14,7 +14,7 @@ const reducer = (state, action) => {
   //eslint-disable-next-line
   switch (action.type) {
     case 'muda':
-      console.log('quando clicar no button ira mudar o estado atraves do dispatch');
+      console.log('quando clicar no button ira mudar o estado atraves do dispatch, q esta usando a action para carregar essa mensagem');
       return { ...state, title: 'mudou!' };
   }
 
