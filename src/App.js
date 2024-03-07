@@ -9,10 +9,12 @@ const globalState = {
 };
 
 //função para manipular seu estado como reducer
+//eslint-disable-next-line
 const reducer = (state, action) => {
-  switch (action.trype) {
+  //eslint-disable-next-line
+  switch (action.type) {
     case 'muda':
-      console.log('mudou o estado');
+      console.log('quando clicar no button ira mudar o estado atraves do dispatch');
       return { ...state, title: 'mudou!' };
   }
 
@@ -27,7 +29,7 @@ function App() {
     <div>
       <h1>{title} {counter}</h1>
       {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
-      <button onClick={() => dispatch({ type: 'action' })}>Click</button>
+      <button onClick={() => dispatch({ type: 'muda' })}>Click</button>
     </div>
   );
 }
