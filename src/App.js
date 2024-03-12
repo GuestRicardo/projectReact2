@@ -42,19 +42,3 @@ function App() {
   );
 }
 export default App;
-
-//o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos que requerem alguma logica, em nosso exemplo usamos a condicional switch
-//reducer é uma função que vai manipular seu estado, lembrando sempre que usar uma função reducer sera preciso retornar um estado
-//a função reducer recebe 2 propriedades o estado atual e o action
-//a função recebe o estado atual e retorna o novo estado
-//observação o context geralmente e mais organizado com reduce
-//o dispatch serve para dispachar coisas(disparar ações) comum usar objetos e definir o tipo da ação
-
-//função para manipular seu estado como reducer
-// const reducer =(state, action) =>{
-//   return {...state};
-// };
-
-//quando clica no botão(action), ele vai chamar a função reducer que vai da acesso ao estado anterior e a ação q foi disparada, com isso
-//foi criada uma condicional, para comparar o type, se caso estiver diferente será voltado para o estado anterior,
-//ao contrario o titulo irá passar para mudou!, como esta definido acima
