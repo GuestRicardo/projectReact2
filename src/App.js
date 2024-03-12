@@ -47,7 +47,7 @@ function App() {
   return (
     <AppContext>
       <div>
-        <h1>teste</h1>
+        <H1 />
         {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
 
       </div>
