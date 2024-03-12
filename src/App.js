@@ -9,13 +9,21 @@ export const globalState = {
   body: 'o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos',
   counter: 0
 };
+//reducer.js
+export const reducer = (state, action) => {
+
+  return { ...state }
+
+}
 
 //inicio do componente
 //AppContext.jsx
 export const Context = createContext();
 export const AppContext = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, globalState);
+
   return (
-    <Context.Provider>{children}</Context.Provider>
+    <Context.Provider value={state}>{children}</Context.Provider>
   );
 }
 //proptyp do appcontext, para ter children
@@ -27,11 +35,13 @@ AppContext.propTypes = {
 //App.jsx
 function App() {
   return (
-    <div>
-      <h1>teste</h1>
-      {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
+    <AppContext>
+      <div>
+        <h1>teste</h1>
+        {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
 
-    </div>
+      </div>
+    </AppContext>
   );
 }
 export default App;
