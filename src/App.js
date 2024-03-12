@@ -1,3 +1,4 @@
+import P from 'prop-types'
 import { useReducer, createContext } from 'react';
 import './App.css';
 
@@ -8,12 +9,22 @@ export const globalState = {
   body: 'o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos',
   counter: 0
 };
-//AppContext.js
-export const Context = createContext();
-export const AppContext = ({children })=>{
-  return
-}
 
+//inicio do componente
+//AppContext.jsx
+export const Context = createContext();
+export const AppContext = ({ children }) => {
+  return (
+    <Context.Provider>{children}</Context.Provider>
+  );
+}
+//proptyp do appcontext, para ter children
+AppContext.propTypes = {
+  children: P.node,
+}
+//fim do componente
+
+//App.jsx
 function App() {
   return (
     <div>
