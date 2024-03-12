@@ -1,5 +1,5 @@
 import P from 'prop-types'
-import { useReducer, createContext } from 'react';
+import { useReducer, createContext, useContext } from 'react';
 import './App.css';
 
 //simulando os locais
@@ -11,9 +11,7 @@ export const globalState = {
 };
 //reducer.js
 export const reducer = (state, action) => {
-
   return { ...state }
-
 }
 
 //inicio do componente
@@ -23,7 +21,7 @@ export const AppContext = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, globalState);
 
   return (
-    <Context.Provider value={state}>{children}</Context.Provider>
+    <Context.Provider value={{ state }}>{children}</Context.Provider>
   );
 }
 //proptyp do appcontext, para ter children
@@ -31,6 +29,18 @@ AppContext.propTypes = {
   children: P.node,
 }
 //fim do componente
+
+//index.js
+//componente inicio
+export const H1 = () => {
+  const context = useContext(Context);
+
+  return (
+    <h1>{context.state.title}</h1>
+  );
+}
+//componente fim
+
 
 //App.jsx
 function App() {
