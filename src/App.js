@@ -30,7 +30,7 @@ AppContext.propTypes = {
 }
 //fim do componente
 
-//index.js
+////H1/index.jsx
 //componente inicio
 export const H1 = () => {
   const context = useContext(Context);
