@@ -21,7 +21,7 @@ export const AppContext = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, globalState);
 
   return (
-    <Context.Provider value={{ state }}>{children}</Context.Provider>
+    <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
   );
 }
 //proptyp do appcontext, para ter children
