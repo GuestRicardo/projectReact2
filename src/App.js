@@ -36,7 +36,7 @@ export const H1 = () => {
   const context = useContext(Context);
 
   return (
-    <h1>{context.state.title}</h1>
+    <h1 onClick={() => context.dispatch({ type: 'CHANGE_TITLE' })}>{context.state.title}</h1>
   );
 }
 //componente fim
