@@ -1,4 +1,4 @@
-import P from 'prop-types'
+import P from 'prop-types'//esse proptypes é um react node
 import { useReducer, createContext, useContext } from 'react';
 import './App.css';
 
