@@ -5,8 +5,8 @@ import './App.css';
 //simulando os locais
 
 //actions.js
-export const actions ={
-
+export const actions = {
+  CHANGE_TITLE: "CHANGE_TITLE",
 }
 
 //data.js
@@ -17,9 +17,14 @@ export const globalState = {
 };
 //reducer.js
 export const reducer = (state, action) => {
-  console.log(action);
+  switch (action.type) {
+    case actions.CHANGE_TITLE: {
+      console.log('Mudando  o titulo');
+      return { ...state, title: action.payload };
+    }
+  }
   return { ...state }
-}
+};
 
 //inicio do componente
 //AppContext.jsx
