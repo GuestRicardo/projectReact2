@@ -1,5 +1,5 @@
 import P from 'prop-types'//esse proptypes é um react node
-import { useReducer, createContext, useContext } from 'react';
+import { useReducer, createContext, useContext, useRef } from 'react';
 import './App.css';
 
 //simulando os locais
@@ -52,9 +52,13 @@ AppContext.propTypes = {
 //componente inicio
 export const H1 = () => {
   const context = useContext(Context);
+  const inputRef = useRef();
 
   return (
-    <h1 onClick={() => context.dispatch({ type: 'CHANGE_TITLE' })}>{context.state.title}</h1>
+    <h1 onClick={() => context.changeTitle( inputRef.current.value )}>
+      {context.state.title}
+    </h1>
+    <input type="text" ref={inputRef} />
   );
 }
 //componente fim
