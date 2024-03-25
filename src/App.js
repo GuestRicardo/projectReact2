@@ -10,6 +10,7 @@ export const actions = {
 }
 
 //data.js
+//este seria um estado para se usar em qualquer lugar da aplicação por ser global
 export const globalState = {
   title: 'Estado Complexo',
   body: 'o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos',
@@ -23,7 +24,7 @@ export const reducer = (state, action) => {
       return { ...state, title: action.payload };
     }
   }
-  return { ...state }
+  return { ...state };
 };
 
 //inicio do componente
