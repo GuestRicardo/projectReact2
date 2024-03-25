@@ -3,6 +3,12 @@ import { useReducer, createContext, useContext } from 'react';
 import './App.css';
 
 //simulando os locais
+
+//actions.js
+export const actions ={
+
+}
+
 //data.js
 export const globalState = {
   title: 'Estado Complexo',
@@ -30,7 +36,7 @@ AppContext.propTypes = {
   children: P.node,
 }
 //fim do componente
- 
+
 ////H1/index.jsx
 //componente inicio
 export const H1 = () => {
