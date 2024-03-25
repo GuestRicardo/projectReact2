@@ -11,6 +11,7 @@ export const actions = {
 
 //data.js
 //este seria um estado para se usar em qualquer lugar da aplicação por ser global
+//um exemplo da vida real seria, um carrinho de compras q fica ao supérior direito da tela de um servComerce
 export const globalState = {
   title: 'Estado Complexo',
   body: 'o useReducer e muito similar ao useState so q ele foi projetado para trabalhar com estados complexos',
