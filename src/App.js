@@ -19,12 +19,14 @@ export const globalState = {
 };
 //reducer.js
 export const reducer = (state, action) => {
+  // eslint-disable-next-line default-case
   switch (action.type) {
     case actions.CHANGE_TITLE: {
       console.log('Mudando  o titulo');
       return { ...state, title: action.payload };
     }
   }
+
   return { ...state };
 };
 
