@@ -34,8 +34,12 @@ export const Context = createContext();
 export const AppContext = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, globalState);
 
+  const changeTitle = (payload) => {
+    dispatch({ type: actions.CHANGE_TITLE, payload });
+  };
+
   return (
-    <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
+    <Context.Provider value={{ state, changeTitle }}>{children}</Context.Provider>
   );
 }
 //proptyp do appcontext, para ter children
