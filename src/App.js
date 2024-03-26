@@ -30,7 +30,7 @@ function App() {
   //estado
   const [counter, setCounter] = useState(0);
   const [delay, setDelay] = useState(1000);
-  const [incrementor, setIncrementor]= useState(1000);
+  const [incrementor, setIncrementor] = useState(1000);
 
   //usando o hook
   useMyHook(() => setCounter((c) => c + 1), delay);
@@ -41,8 +41,8 @@ function App() {
       <button>+{incrementor}</button>
       <button>-{incrementor}</button>
       {/* ideia do input e mudar o valor do increment */}
-      {/* onchange esta setando o incrementor */}
-      <input value={incrementor} onChange={()=> setIncrementor()} type="number" name="" id="" />
+      {/* onchange esta setando o valor do input no incremento, q no caso e o set incrementor, q e o estado atualizado*/}
+      <input value={incrementor} onChange={(e) => setIncrementor( e.target.value)} type="number" name="" id="" />
     </div>
   );
 }
