@@ -8,7 +8,10 @@ const useMyHook = (callback) => {
   //esta função stInterval esta na API do proprio node
   //esta sendo executado a cada 2 segundos
 
-  //para nao depender de dependencia sera usado o saveCb
+  //para nao depender de dependencia sera usado o saveCallback, q sempre retornara essa função.
+  //tambem esta sendo passado um deley que unicia depois de 1 segundo
+  
+
   const savedCallback = useRef();
   useEffect(()=>{
     savedCallback.current = callback;
