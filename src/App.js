@@ -40,6 +40,9 @@ function App() {
       {/* //quando clicar no botao sera incrementado um novo valor */}
       <button>+{incrementor}</button>
       <button>-{incrementor}</button>
+      {/* ideia do input e mudar o valor do increment */}
+      {/* onchange esta setando o incrementor */}
+      <input value={incrementor} onChange={()=> setIncrementor()} type="number" name="" id="" />
     </div>
   );
 }
