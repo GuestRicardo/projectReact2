@@ -30,13 +30,16 @@ function App() {
   //estado
   const [counter, setCounter] = useState(0);
   const [delay, setDelay] = useState(1000);
+  const [incrementor, setIncrementor]= useState(1000);
 
   //usando o hook
   useMyHook(() => setCounter((c) => c + 1), delay);
   return (
     <div>
       <h1>Contador:{counter}</h1>
-      <button>+{delay}</button>
+      {/* //quando clicar no botao sera incrementado um novo valor */}
+      <button>+{incrementor}</button>
+      <button>-{incrementor}</button>
     </div>
   );
 }
