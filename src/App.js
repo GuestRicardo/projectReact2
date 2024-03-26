@@ -36,7 +36,7 @@ function App() {
   return (
     <div>
       <h1>Contador:{counter}</h1>
-      <button>Clique aqui</button>
+      <button>+{delay}</button>
     </div>
   );
 }
