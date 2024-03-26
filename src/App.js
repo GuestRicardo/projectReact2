@@ -4,7 +4,7 @@ import './App.css';
 
 //criando um hook, ele é uma função no react
 //ele vai simular o setInterval
-const useMyHook = (callback, delay= 1000) => {
+const useMyHook = (callback, delay = 1000) => {
   //esta função stInterval esta na API do proprio node
 
 
@@ -12,13 +12,13 @@ const useMyHook = (callback, delay= 1000) => {
   //tambem esta sendo passado um deley que unicia depois de 1 segundo
 
   const savedCallback = useRef();
-  useEffect(()=>{
+  useEffect(() => {
     savedCallback.current = callback;
   }, [callback]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-    savedCallback.current()
+      savedCallback.current()
     }, delay);
     //lembrando q é sempre certo limpar o lixo da memoria, para isso usa o clearInterval
     return () => clearInterval(interval);
@@ -29,6 +29,7 @@ const useMyHook = (callback, delay= 1000) => {
 function App() {
   //estado
   const [counter, setCounter] = useState(0);
+  const [] = useState();
 
   //usando o hook
   useMyHook(() => {
@@ -38,6 +39,7 @@ function App() {
   return (
     <div>
       <h1>Contador:{counter}</h1>
+      <button>Clique aqui</button>
     </div>
   );
 }
