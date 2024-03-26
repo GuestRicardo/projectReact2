@@ -10,11 +10,12 @@ const useMyHook = () => {
 //App.jsx
 function App() {
   //estado
-  
+
 const [counter, setCounter] = useState(0);
   useEffect(() => {
-
-  })
+    //esta função stInterval esta na API do proprio node
+    const interval = setInterval();
+  },[])
   return (
 
     <div>
