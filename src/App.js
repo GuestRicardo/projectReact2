@@ -7,13 +7,20 @@ import './App.css';
 const useMyHook = (callback) => {
   //esta função stInterval esta na API do proprio node
   //esta sendo executado a cada 2 segundos
+
+  //para nao depender de dependencia sera usado o saveCb
+  const savedCallback = useRef();
+  useEffect(()=>{
+    savedCallback.current = callback;
+  }, [callback]);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      callback();
+    savedCallback.current()
     }, 2000);
     //lembrando q é sempre certo limpar o lixo da memoria, para isso usa o clearInterval
     return () => clearInterval(interval);
-  }, [callback]);
+  }, []);
 };
 
 //App.jsx
