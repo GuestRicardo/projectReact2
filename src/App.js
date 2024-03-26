@@ -29,13 +29,10 @@ const useMyHook = (callback, delay = 1000) => {
 function App() {
   //estado
   const [counter, setCounter] = useState(0);
-  const [] = useState();
+  const [delay, setDelay] = useState(1000);
 
   //usando o hook
-  useMyHook(() => {
-    setCounter((c) => c + 1);
-  });
-
+  useMyHook(() => setCounter((c) => c + 1), delay);
   return (
     <div>
       <h1>Contador:{counter}</h1>
