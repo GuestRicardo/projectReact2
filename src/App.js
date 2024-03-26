@@ -6,13 +6,11 @@ import './App.css';
 //App.jsx
 function App() {
   return (
-    <AppContext>
-      <div>
-        <H1 />
-        {/**este type é muito importante para action, e pode ser passado o quanto for preciso*/}
 
-      </div>
-    </AppContext>
+    <div>
+      <h1>Teste</h1>
+    </div>
+
   );
 }
 export default App;
