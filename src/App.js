@@ -6,8 +6,6 @@ import './App.css';
 //ele vai simular o setInterval
 const useMyHook = (callback, delay = 1000) => {
   //esta função stInterval esta na API do proprio node
-
-
   //para nao depender de dependencia sera usado o saveCallback, q sempre retornara essa função.
   //tambem esta sendo passado um deley que unicia depois de 1 segundo
 
