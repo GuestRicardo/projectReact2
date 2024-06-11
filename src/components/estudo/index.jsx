@@ -5,6 +5,7 @@ export const Home = () => {
 
   const handleClick = () => {
     setContador((c) => [...c, +c.slice(-1) + 1]);
+    //divRef é a referencia da div q esta na home
     const divRef = useRef();
     {
       /* o sinal de +(operador) é praconverter em string) */
