@@ -21,7 +21,7 @@ export const Home = () => {
     <>
       <button onClick={handleClick}> Contador {contador.slice(-1)}</button>
       {/* esta pegando o ultimo elemento do array */}
-      <div>
+      <div ref={ divRef }>
         {contador.map((c) => {
           return <p key={`contando -${c}`}>{c}</p>;
         })}
