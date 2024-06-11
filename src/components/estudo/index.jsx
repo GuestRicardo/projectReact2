@@ -5,14 +5,15 @@ export const Home = () => {
 
   const handleClick = () => {
     setContador((c) => [...c, +c.slice(-1) + 1]);
-    //divRef é a referencia da div q esta na home
+    //divRef é a referencia da div q esta no return com o scroll
+    //entao ela esta referenciando diretamente do DOM
     const divRef = useRef();
     {
       /* o sinal de +(operador) é praconverter em string) */
     }
   };
 
-  /**Este useEffect é responsavel, para toda vez que atulaizar a pagina será carregado o scrool sempre encima, no inicio, para evitar de iniciar com scroll no meio */
+  /**Este useEffect é responsavel, para toda vez que atulaizar ela vai rolar na altura que estiver selecionado o objeto*/
   useEffect(() => {
     divRef.current.scrollTop = divRef.current.scrollHeight;
   });
