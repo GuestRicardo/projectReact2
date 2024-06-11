@@ -10,6 +10,8 @@ export const Home = () => {
       /* o sinal de +(operador) é praconverter em string) */
     }
   };
+
+  /**Este useEffect é responsavel, para toda vez que atulaizar a pagina será carregado o scrool sempre encima, no inicio, para evitar de iniciar com scroll no meio */
   useEffect(() => {
     divRef.current.scrollTop = divRef.current.scrollHeight;
   });
