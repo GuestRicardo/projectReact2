@@ -44,3 +44,4 @@ export const DisplayCounted = forwardRef(
   };
 );
 //uma tag no jsx aceita passar um elemento diretamente do DOM usando ref (exemplo: <div ref={divRef}>)
+//ref e uma propriedade especial do react q serve para referenciar algo da DOM
