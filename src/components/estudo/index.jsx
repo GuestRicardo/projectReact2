@@ -23,12 +23,18 @@ export const Home = () => {
   return (
     <>
       <button onClick={handleClick}> Contador {contador.slice(-1)}</button>
-      {/* esta pegando o ultimo elemento do array */}
-      <div ref={divRef}>
-        {contador.map((c) => {
-          return <p key={`contando -${c}`}>{c}</p>;
-        })}
-      </div>
     </>
   );
 };
+//elemento separado
+export const DisplayCounted = () => {
+  {
+    /* esta pegando o ultimo elemento do array */
+  }
+  <div ref={divRef}>
+    {contador.map((c) => {
+      return <p key={`contando -${c}`}>{c}</p>;
+    })}
+  </div>;
+};
+//uma tag no jsx aceita passar um elemento diretamente do DOM usando ref (exemplo: <div ref={divRef}>)
