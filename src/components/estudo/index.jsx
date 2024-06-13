@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { forwardRef, useLayoutEffect, useRef, useState } from 'react';
 
 export const Home = () => {
   const [contador, setContador] = useState([0, 1, 2, 3, 4]);
@@ -23,18 +23,24 @@ export const Home = () => {
   return (
     <>
       <button onClick={handleClick}> Contador {contador.slice(-1)}</button>
+      <DisplayCounted counted={contador} ref={divRef} />
     </>
   );
 };
-//elemento separado
-export const DisplayCounted = () => {
-  {
-    /* esta pegando o ultimo elemento do array */
-  }
-  <div ref={divRef}>
-    {contador.map((c) => {
-      return <p key={`contando -${c}`}>{c}</p>;
-    })}
-  </div>;
-};
+//elemento separado(componente)
+export const DisplayCounted = forwardRef(
+  function DisplayCounted({ contador }, divRef) {
+    //contador esta entre colchetes por ser props
+    {
+      /* esta pegando o ultimo elemento do array */
+    }
+    return (
+      <div ref={divRef}>
+        {contador.map((c) => {
+          return <p key={`contando -${c}`}>{c}</p>;
+        })}
+      </div>
+    );
+  };
+);
 //uma tag no jsx aceita passar um elemento diretamente do DOM usando ref (exemplo: <div ref={divRef}>)
