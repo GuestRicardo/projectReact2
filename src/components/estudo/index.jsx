@@ -30,13 +30,15 @@ export const Home = () => {
 //elemento separado(componente)
 export const DisplayCounted = forwardRef(
   function DisplayCounted({ contador }, divRef) {
-    const rendleClick = () => {
 
+    const [rend, setRand] = useState('0.123')
+    const rendleClick = () => {
+///
     }
     return (
       <div ref={divRef}>
         {contador.map((c) => {
-          return <p key={`contando -${c}`}>{c}</p>;
+          return <p key={`contando -${c}`}>{c} +++{rand}</p>;
         })}
       </div>
     );
