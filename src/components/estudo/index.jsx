@@ -33,12 +33,16 @@ export const DisplayCounted = forwardRef(
 
     const [rend, setRand] = useState('0.123')
     const rendleClick = () => {
-///
+      setRand(Math.random().toFixed(2));
     }
     return (
       <div ref={divRef}>
         {contador.map((c) => {
-          return <p key={`contando -${c}`}>{c} +++{rand}</p>;
+          return (
+            <p>
+              return <p key={`contando -${c}`}>{c} +++{rand}</p>;
+            </p>
+          );
         })}
       </div>
     );
