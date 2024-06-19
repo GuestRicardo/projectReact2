@@ -5,19 +5,11 @@ export const Home = () => {
 
   const handleClick = () => {
     setContador((c) => [...c, +c.slice(-1) + 1]);
-    //divRef é a referencia da div q esta no return com o scroll
-    //entao ela esta referenciando diretamente do DOM
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const divRef = useRef();
-    {
-      /* o sinal de +(operador) é praconverter em string) */
-    }
+
   };
 
-  /**Este useLayoutEffect executará o codigo somente quando o navegador carregar na tela,
-   *  ele renderizara as coisas junto com o DOM ele vai esperar o DOM ser atualizado*/
   useLayoutEffect(() => {
-    divRef.current.scrollTop = divRef.current.scrollHeight;
+    divRef.current.divRef.scrollTop = divRef.current.scrollHeight;
   });
 
   return (
@@ -37,9 +29,10 @@ export const DisplayCounted = forwardRef(
       divRef.current.handleClick();
     };
 
-    useImperativeHandle(ref, ()=>{
+    useImperativeHandle(ref, () => ({
       handleClick,
-    });
+      divRef: divRef.current,
+    }));
 
     return (
       <div ref={divRef}>
