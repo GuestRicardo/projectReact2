@@ -1,4 +1,4 @@
-import { forwardRef, useLayoutEffect, useRef, useState } from 'react';
+import { forwardRef, useImperativeHandle, useLayoutEffect, useRef, useState } from 'react';
 
 export const Home = () => {
   const [contador, setContador] = useState([0, 1, 2, 3, 4]);
@@ -34,7 +34,13 @@ export const DisplayCounted = forwardRef(
     const [rend, setRand] = useState('0.123')
     const rendleClick = () => {
       setRand(Math.random().toFixed(2));
-    }
+      divRef.current.handleClick();
+    };
+
+    useImperativeHandle(ref, ()=>{
+      handleClick,
+    });
+
     return (
       <div ref={divRef}>
         {contador.map((c) => {
@@ -48,5 +54,4 @@ export const DisplayCounted = forwardRef(
     );
   };
 );
-//uma tag no jsx aceita passar um elemento diretamente do DOM usando ref (exemplo: <div ref={divRef}>)
-//ref e uma propriedade especial do react q serve para referenciar algo da DOM
+//useImperativeHandle te possibilita passar de forma imperativa do componente filho para o componente pai, referencias pela DOM
