@@ -30,9 +30,8 @@ export const Home = () => {
 //elemento separado(componente)
 export const DisplayCounted = forwardRef(
   function DisplayCounted({ contador }, divRef) {
-    //contador esta entre colchetes por ser props
-    {
-      /* esta pegando o ultimo elemento do array */
+    const rendleClick = () => {
+
     }
     return (
       <div ref={divRef}>
